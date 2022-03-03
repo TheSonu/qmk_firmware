@@ -56,5 +56,8 @@
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
 
-#define BOOTMAGIC_LITE_ROW 0
-#define BOOTMAGIC_LITE_COLUMN 1
+#define BOOTMAGIC_LITE_ROW 4
+#define BOOTMAGIC_LITE_COLUMN 0
+
+/* Set Constant Mode for Mouse Scrolling */
+#define MK_3_SPEED

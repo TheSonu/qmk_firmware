@@ -35,15 +35,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                  RGB_HUI, RGB_SAI, RGB_VAI, KC_TRNS,
                  RGB_HUD, RGB_SAD, RGB_VAD, KC_TRNS,
         RESET,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        TG(2),   RESET,   KC_TRNS, KC_TRNS, KC_TRNS),
+        TG(2),   RESET,   KC_TRNS, MO(3), KC_TRNS),
+
+    [3] = LAYOUT(
+                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        QK_BOOT, KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS),
 };
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) { /* First encoder */
         if (clockwise) {
-            tap_code(KC_VOLU);
+            tap_code(KC_WH_R);
         } else {
-            tap_code(KC_VOLD);
+            tap_code(KC_WH_L);
         }
     }
     return true;
